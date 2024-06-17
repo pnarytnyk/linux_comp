@@ -6,15 +6,17 @@
 int main() {
 
   char op;
+  char tmp;
   char str[100];
   printf("Please select an operation you would like to do:\n"\
          " 1 - convert to uppercase\n"\
          " 2 - convert to lowercase\n");
 
-  scanf("%c", &op);
-  printf("Please enter input string up to 100 characters long to perform selected operation: \n");
+  scanf(" %c", &op);
+  // read leftover \n
+  scanf("%c", &tmp);
+  printf("Please enter input string up to 100 characters long to perform selected operation (all input outside of 100 characters will be ignored): \n");
   fgets(str, sizeof(str), stdin);
-  scanf("%[^\n]s", str);
 
   switch (op) {
     case '1':

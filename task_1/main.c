@@ -6,6 +6,7 @@
 int main() {
 
   char op;
+  char tmp;
   double first, second;
   printf("Please select an operation you would like to do:\n"\
          " 1 - addition\n"\
@@ -16,6 +17,12 @@ int main() {
          " 6 - square root\n");
 
   scanf("%c", &op);
+  //check if only one character was entered
+  scanf("%c", &tmp);
+  if (((char) tmp) != '\n'){
+	printf("Invalid selection!\n");
+	return 0;
+  }
 
 // Input and validation 
   switch (op) {
